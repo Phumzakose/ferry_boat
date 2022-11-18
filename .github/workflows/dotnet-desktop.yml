@@ -14,4 +14,4 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Test
-      run: dotnet test [path to your tests] e.g ./Ferry.Tests/
+      run: dotnet test ./FerryFunctions.Tests/
