@@ -16,6 +16,32 @@ public class UnitTest1
 
   }
   [Fact]
+  public void ItShouldBeAbleToReturnAcceptedIfNumberOfPeopleAndNumberOfCarsAreEqualToPeopleCountAndCarCount()
+  {
+    test.Board(new Car("yellow", 1, "CA 123-568"));
+    test.Board(new Car("slive grey", 3, "CY 197-321"));
+    test.Board(new Car("black", 5, "CF 189-568"));
+    test.Board(new Car("white", 3, "CF 128-568"));
+    test.Board(new Car("navy", 4, "CF 188-578"));
+    test.Board(new Car("yellow", 1, "CA 123-568"));
+    test.Board(new Car("slive grey", 5, "CY 197-321"));
+    test.Board(new Car("black", 2, "CF 148-568"));
+    test.Board(new Car("white", 2, "CF 108-568"));
+    test.Board(new Car("red", 3, "CF 188-268"));
+    test.Board(new Car("pink", 1, "CA 223-564"));
+    test.Board(new Car("blue", 4, "CY 444-371"));
+    test.Board(new Car("white", 2, "CY 288-368"));
+    test.Board(new Car("maroon", 3, "CA 138-538"));
+    test.Board(new Car("yellow", 1, "CA 123-568"));
+    test.Board(new Car("yellow", 1, "CA 123-568"));
+    test.Board(new Car("black", 3, "CF 998-568"));
+    test.Board(new Car("white", 1, "CF 188-068"));
+    test.Board(new Car("maroon", 2, "CA 138-538"));
+    test.Board(new Car("red", 3, "CF 188-268"));
+    Assert.Equal("Accepted", test.Board(new Car("black", 3, "CF 188-568")));
+
+  }
+  [Fact]
   public void ItShouldBeAbleToReturnRejectedIfItDoesExceedNumberOfPeopleAndCars()
   {
     test.Board(new Car("yellow", 1, "CA 123-568"));
@@ -38,6 +64,7 @@ public class UnitTest1
     test.Board(new Car("white", 7, "CF 188-568"));
     test.Board(new Car("maroon", 7, "CA 138-538"));
     test.Board(new Car("red", 7, "CF 188-268"));
+    test.Board(new Car("pink", 4, "CF 288-368"));
 
 
     Assert.Equal("Rejected", test.Board(new Car("red", 7, "CA 138-538")));

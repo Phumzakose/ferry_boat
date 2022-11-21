@@ -7,6 +7,7 @@ public class Ferry
   public int CarsCount { get; set; }
   public int numberOfCars;
   public int numberOfPeople;
+  
   List<KeyValuePair<string, int>> cars = new List<KeyValuePair<string, int>>();
 
   public List<Car> carsList = new List<Car>();
