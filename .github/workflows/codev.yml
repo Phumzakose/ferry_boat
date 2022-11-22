@@ -19,12 +19,12 @@ jobs:
       with:
         dotnet-version: 6.0.x
     - name: Test
-      run: dotnet test ./FerryFunction.Test/
+      run: dotnet test ./FerryFunctions.Test/
     - name: Restore dependencies
-      run: dotnet restore ./FerryFunction
+      run: dotnet restore ./FerryFunctions
     - name: Build
-      run: dotnet build --no-restore /p:ContinuousIntegrationBuild=true ./FerryFunction
+      run: dotnet build --no-restore /p:ContinuousIntegrationBuild=true ./FerryFunctions
     - name: Test
-      run: dotnet test --no-build --verbosity normal /p:CollectCoverage=true /p:CoverletOutputFormat=opencover ./FerryFunction
+      run: dotnet test --no-build --verbosity normal /p:CollectCoverage=true /p:CoverletOutputFormat=opencover ./FerryFunctions
     - name: Codecov
       uses: codecov/codecov-action@v1
